@@ -54,6 +54,7 @@ $VERSION = '3.972002';
 
 %GLOBALS = (
     %SNMP::Info::Layer3::GLOBALS,
+    'serial1'         => '.1.3.6.1.4.1.1872.2.5.1.3.1.18.0',
     'old_sw_ver'      => 'ALTEON_TIGON_SWITCH_MIB__agSoftwareVersion',
     'new_sw_ver'      => 'ALTEON_CHEETAH_SWITCH_MIB__agSoftwareVersion',
     'old_tftp_action' => 'ALTEON_TIGON_SWITCH_MIB__agTftpAction',

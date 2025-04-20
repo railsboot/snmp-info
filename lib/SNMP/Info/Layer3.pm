@@ -85,8 +85,7 @@ $VERSION = '3.972002';
     %SNMP::Info::IPv6::GLOBALS,
     %SNMP::Info::LLDP::GLOBALS,
     'mac' => 'ifPhysAddress.1',
-    'serial1' =>
-        '.1.3.6.1.4.1.9.3.6.3.0',    # OLD-CISCO-CHASSIS-MIB::chassisId.0
+    'serial1' => '.1.3.6.1.4.1.9.3.6.3.0',    # OLD-CISCO-CHASSIS-MIB::chassisId.0
     'router_ip'    => 'ospfRouterId.0',
     'bgp_id'       => 'bgpIdentifier.0',
     'bgp_local_as' => 'bgpLocalAs.0',
@@ -391,6 +390,7 @@ sub vendor {
     return 'cisco' if $id =~ /^\Q.1.3.6.1.4.1.9.9.368.4.\E\d+/;
     return 'cisco'   if ( $descr =~ /(cisco|\bios\b)/i );
     return 'brocade' if ( $descr =~ /foundry/i );
+    return 'Hillstone' if $id =~ /^\Q.1.3.6.1.4.1.28557.\E\d+/;
 
     return 'unknown';
 
